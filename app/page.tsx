@@ -35,10 +35,10 @@ export default function Home() {
   useMemo(() => {
     const loadData = async () => {
       try {
-        const nbaResponse = await fetch('/final_code_data/data/nba_data.csv');
+        const nbaResponse = await fetch('/data/nba_data.csv');
         const nbaText = await nbaResponse.text();
         
-        const gameResponse = await fetch('/final_code_data/data/game_data.csv');
+        const gameResponse = await fetch('/data/game_data.csv');
         const gameText = await gameResponse.text();
 
         Papa.parse(nbaText, {
